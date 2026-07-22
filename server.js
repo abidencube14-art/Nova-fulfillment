@@ -1,5 +1,7 @@
 const express = require("express");
 const cors = require("cors");
+const testRoutes =
+require("./routes/testRoutes");
 
 require("dotenv").config();
 
@@ -14,6 +16,7 @@ require("./routes/paymentRoutes");
 
 app.use(cors());
 app.use(express.json());
+app.use("/test", testRoutes);
 
 
 // Payment routes
