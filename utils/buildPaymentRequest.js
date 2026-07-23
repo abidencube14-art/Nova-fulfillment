@@ -13,8 +13,7 @@ function buildPaymentRequest(order) {
         callback_url:
         "https://nova-ai-fulfillment.onrender.com/pesapal/payment-status",
 
-        notification_id: "",
-
+        notification_id: process.env.PESAPAL_IPN_ID,
         billing_address: {
 
             email_address: order.email,
