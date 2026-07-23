@@ -5,6 +5,7 @@ require("./routes/testRoutes");
 const orderRoutes = require("./routes/orderRoutes");
 const demoOrder =
 require("./routes/demoOrder");
+const getIpn = require("./routes/getIpn");
 
 require("dotenv").config();
 
@@ -22,6 +23,7 @@ app.use(express.json());
 app.use("/test", testRoutes);
 app.use("/orders", orderRoutes);
 app.use("/demo-payment",demoOrder);
+app.use("/ipn-list", getIpn);
 
 
 // Payment routes
