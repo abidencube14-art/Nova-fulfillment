@@ -3,6 +3,8 @@ const cors = require("cors");
 const testRoutes =
 require("./routes/testRoutes");
 const orderRoutes = require("./routes/orderRoutes");
+const demoOrder =
+require("./routes/demoOrder");
 
 require("dotenv").config();
 
@@ -19,6 +21,7 @@ app.use(cors());
 app.use(express.json());
 app.use("/test", testRoutes);
 app.use("/orders", orderRoutes);
+app.use("/demo-payment",demoOrder);
 
 
 // Payment routes
