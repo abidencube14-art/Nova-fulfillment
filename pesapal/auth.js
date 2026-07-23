@@ -8,7 +8,7 @@ async function authenticatePesapal() {
 
         const response = await axios.post(
 
-            "https://cybqa.pesapal.com/pesapalv3/api/Auth/RequestToken",
+            "https://pay.pesapal.com/v3/api/Auth/RequestToken",
 
             {
                 consumer_key: config.pesapal.consumerKey,
